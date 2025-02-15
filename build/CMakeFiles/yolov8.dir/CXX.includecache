@@ -133,6 +133,8 @@ yolov8.hpp
 /home/clh/YOLOv8-inference/yolov8.hpp
 chrono
 -
+algorithm
+-
 
 /usr/include/opencv4/opencv2/calib3d.hpp
 opencv2/core.hpp

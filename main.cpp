@@ -4,23 +4,27 @@
 #include "opencv2/opencv.hpp"  // OpenCV库，用于图像处理
 #include "yolov8.hpp"         // YOLOv8模型相关的头文件
 #include <chrono>             // 用于时间测量
+#include <algorithm>          // 用于std::sort
 
 namespace fs = ghc::filesystem;  // 文件系统命名空间别名
 
-// COCO数据集的80个类别名称
+// // COCO数据集的80个类别名称
+// const std::vector<std::string> CLASS_NAMES = {
+//     "person",         "bicycle",    "car",           "motorcycle",    "airplane",     "bus",           "train",
+//     "truck",          "boat",       "traffic light", "fire hydrant",  "stop sign",    "parking meter", "bench",
+//     "bird",           "cat",        "dog",           "horse",         "sheep",        "cow",           "elephant",
+//     "bear",           "zebra",      "giraffe",       "backpack",      "umbrella",     "handbag",       "tie",
+//     "suitcase",       "frisbee",    "skis",          "snowboard",     "sports ball",  "kite",          "baseball bat",
+//     "baseball glove", "skateboard", "surfboard",     "tennis racket", "bottle",       "wine glass",    "cup",
+//     "fork",           "knife",      "spoon",         "bowl",          "banana",       "apple",         "sandwich",
+//     "orange",         "broccoli",   "carrot",        "hot dog",       "pizza",        "donut",         "cake",
+//     "chair",          "couch",      "potted plant",  "bed",           "dining table", "toilet",        "tv",
+//     "laptop",         "mouse",      "remote",        "keyboard",      "cell phone",   "microwave",     "oven",
+//     "toaster",        "sink",       "refrigerator",  "book",          "clock",        "vase",          "scissors",
+//     "teddy bear",     "hair drier", "toothbrush"};
+// 火焰烟雾数据集
 const std::vector<std::string> CLASS_NAMES = {
-    "person",         "bicycle",    "car",           "motorcycle",    "airplane",     "bus",           "train",
-    "truck",          "boat",       "traffic light", "fire hydrant",  "stop sign",    "parking meter", "bench",
-    "bird",           "cat",        "dog",           "horse",         "sheep",        "cow",           "elephant",
-    "bear",           "zebra",      "giraffe",       "backpack",      "umbrella",     "handbag",       "tie",
-    "suitcase",       "frisbee",    "skis",          "snowboard",     "sports ball",  "kite",          "baseball bat",
-    "baseball glove", "skateboard", "surfboard",     "tennis racket", "bottle",       "wine glass",    "cup",
-    "fork",           "knife",      "spoon",         "bowl",          "banana",       "apple",         "sandwich",
-    "orange",         "broccoli",   "carrot",        "hot dog",       "pizza",        "donut",         "cake",
-    "chair",          "couch",      "potted plant",  "bed",           "dining table", "toilet",        "tv",
-    "laptop",         "mouse",      "remote",        "keyboard",      "cell phone",   "microwave",     "oven",
-    "toaster",        "sink",       "refrigerator",  "book",          "clock",        "vase",          "scissors",
-    "teddy bear",     "hair drier", "toothbrush"};
+    "fire", "smoke"};
 
 // 用于目标检测可视化的颜色列表，每个类别对应一个RGB颜色
 const std::vector<std::vector<unsigned int>> COLORS = {
@@ -60,7 +64,7 @@ int main(int argc, char** argv)
     // 初始化YOLOv8模型
     auto yolov8 = new YOLOv8(engine_file_path);
     yolov8->make_pipe(true);
-
+    printf("model init done\n");
     // 处理输入路径
     if (fs::exists(path)) {
         std::string suffix = path.extension();
@@ -76,13 +80,18 @@ int main(int argc, char** argv)
         // 如果是目录，获取目录下所有jpg图片
         else if (fs::is_directory(path)) {
             cv::glob(path.string() + "/*.jpg", imagePathList);
+            // 对路径列表进行排序
+            std::sort(imagePathList.begin(), imagePathList.end(), [](const std::string& a, const std::string& b) {
+                return std::stoi(a.substr(a.find_last_of('/') + 1, a.find_last_of('.') - a.find_last_of('/') - 1)) <
+                       std::stoi(b.substr(b.find_last_of('/') + 1, b.find_last_of('.') - b.find_last_of('/') - 1));
+            });
         }
         else {
             printf("suffix %s is wrong !!!\n", suffix.c_str());
             std::abort();
         }
     }
-
+    
 
     cv::Mat             res, image;          // 结果图像和输入图像
     cv::Size            size = cv::Size{640, 640};  // 模型输入大小
@@ -114,13 +123,14 @@ int main(int argc, char** argv)
             printf("cost %2.4lf ms\n", tc);
             cv::imshow("result", res);
             // 按q键退出
-            if (cv::waitKey(10) == 'q') {
+            if (cv::waitKey(1) == 'q') {
                 break;
             }
         }
     }
     // 处理图片
     else {
+        cv::Mat resizedImage;
         // 遍历处理每张图片
         for (auto& p : imagePathList) {
             objs.clear();
@@ -134,8 +144,15 @@ int main(int argc, char** argv)
             // 计算并打印推理时间
             auto tc = (double)std::chrono::duration_cast<std::chrono::microseconds>(end - start).count() / 1000.;
             printf("cost %2.4lf ms\n", tc);
-            cv::imshow("result", res);
-            cv::waitKey(0);
+
+            // cv::resize(res, resizedImage, cv::Size(), 0.3, 0.3, cv::INTER_LINEAR);  //fire_labelme
+            cv::resize(res, resizedImage, cv::Size(), 0.3, 0.3, cv::INTER_LINEAR);  //synthetic_fire-smoke
+            cv::imshow("result", resizedImage);
+            sleep(0.5);
+            if (cv::waitKey(1) == 'q') {
+                break;
+            }
+            // cv::waitKey(0);
         }
     }
     // 清理资源
