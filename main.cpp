@@ -73,15 +73,16 @@ int main(int argc, char** argv)
                  || suffix == ".mkv") {
             isVideo = true;
         }
+        // 如果是目录，获取目录下所有jpg图片
+        else if (fs::is_directory(path)) {
+            cv::glob(path.string() + "/*.jpg", imagePathList);
+        }
         else {
             printf("suffix %s is wrong !!!\n", suffix.c_str());
             std::abort();
         }
     }
-    // 如果是目录，获取目录下所有jpg图片
-    else if (fs::is_directory(path)) {
-        cv::glob(path.string() + "/*.jpg", imagePathList);
-    }
+
 
     cv::Mat             res, image;          // 结果图像和输入图像
     cv::Size            size = cv::Size{640, 640};  // 模型输入大小
@@ -100,11 +101,13 @@ int main(int argc, char** argv)
         // 逐帧处理视频
         while (cap.read(image)) {
             objs.clear();
+            
             yolov8->copy_from_Mat(image, size);  // 预处理图像
             auto start = std::chrono::system_clock::now();
             yolov8->infer();  // 模型推理
             auto end = std::chrono::system_clock::now();
             yolov8->postprocess(objs);  // 后处理获取检测结果
+
             yolov8->draw_objects(image, res, objs, CLASS_NAMES, COLORS);  // 绘制检测结果
             // 计算并打印推理时间
             auto tc = (double)std::chrono::duration_cast<std::chrono::microseconds>(end - start).count() / 1000.;
