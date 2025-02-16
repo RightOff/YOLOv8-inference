@@ -22,10 +22,15 @@ message(STATUS "OpenCV Libs: \n${OpenCV_LIBS}\n")
 message(STATUS "OpenCV Libraries: \n${OpenCV_LIBRARIES}\n")
 message(STATUS "OpenCV Headers: \n${OpenCV_INCLUDE_DIRS}\n")
 
+# Qt
+find_package(Qt5 COMPONENTS Core Widgets REQUIRED)
+set(CMAKE_AUTOMOC ON)
+set(CMAKE_AUTORCC ON)
+set(CMAKE_AUTOUIC ON)
+
 # TensorRT
 set(TensorRT_INCLUDE_DIRS /usr/include/aarch64-linux-gnu)
 set(TensorRT_LIBRARIES /usr/lib/aarch64-linux-gnu)
-
 
 message(STATUS "TensorRT Libs: \n${TensorRT_LIBRARIES}\n")
 message(STATUS "TensorRT Headers: \n${TensorRT_INCLUDE_DIRS}\n")
@@ -47,10 +52,20 @@ list(APPEND ALL_LIBS
 include_directories(${INCLUDE_DIRS})
 
 add_executable(${PROJECT_NAME}
-        main.cpp
+        src/main.cpp
+        src/mainwindow.cpp
+        src/yolov8.cpp
+        include/mainwindow.hpp
         include/yolov8.hpp
         include/common.hpp
         )
 
 link_directories(${ALL_LIBS})
-target_link_libraries(${PROJECT_NAME} PRIVATE nvinfer nvinfer_plugin ${CUDA_LIBRARIES} ${OpenCV_LIBS})
+target_link_libraries(${PROJECT_NAME} PRIVATE 
+    nvinfer 
+    nvinfer_plugin 
+    ${CUDA_LIBRARIES} 
+    ${OpenCV_LIBS}
+    Qt5::Core
+    Qt5::Widgets
+)

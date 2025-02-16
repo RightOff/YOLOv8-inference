@@ -57,27 +57,72 @@ include CMakeFiles/yolov8.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/yolov8.dir/flags.make
 
-CMakeFiles/yolov8.dir/main.cpp.o: CMakeFiles/yolov8.dir/flags.make
-CMakeFiles/yolov8.dir/main.cpp.o: ../main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/clh/YOLOv8-inference/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/yolov8.dir/main.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/yolov8.dir/main.cpp.o -c /home/clh/YOLOv8-inference/main.cpp
+CMakeFiles/yolov8.dir/yolov8_autogen/mocs_compilation.cpp.o: CMakeFiles/yolov8.dir/flags.make
+CMakeFiles/yolov8.dir/yolov8_autogen/mocs_compilation.cpp.o: yolov8_autogen/mocs_compilation.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/clh/YOLOv8-inference/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/yolov8.dir/yolov8_autogen/mocs_compilation.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/yolov8.dir/yolov8_autogen/mocs_compilation.cpp.o -c /home/clh/YOLOv8-inference/build/yolov8_autogen/mocs_compilation.cpp
 
-CMakeFiles/yolov8.dir/main.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/yolov8.dir/main.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/clh/YOLOv8-inference/main.cpp > CMakeFiles/yolov8.dir/main.cpp.i
+CMakeFiles/yolov8.dir/yolov8_autogen/mocs_compilation.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/yolov8.dir/yolov8_autogen/mocs_compilation.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/clh/YOLOv8-inference/build/yolov8_autogen/mocs_compilation.cpp > CMakeFiles/yolov8.dir/yolov8_autogen/mocs_compilation.cpp.i
 
-CMakeFiles/yolov8.dir/main.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/yolov8.dir/main.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/clh/YOLOv8-inference/main.cpp -o CMakeFiles/yolov8.dir/main.cpp.s
+CMakeFiles/yolov8.dir/yolov8_autogen/mocs_compilation.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/yolov8.dir/yolov8_autogen/mocs_compilation.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/clh/YOLOv8-inference/build/yolov8_autogen/mocs_compilation.cpp -o CMakeFiles/yolov8.dir/yolov8_autogen/mocs_compilation.cpp.s
+
+CMakeFiles/yolov8.dir/src/main.cpp.o: CMakeFiles/yolov8.dir/flags.make
+CMakeFiles/yolov8.dir/src/main.cpp.o: ../src/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/clh/YOLOv8-inference/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/yolov8.dir/src/main.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/yolov8.dir/src/main.cpp.o -c /home/clh/YOLOv8-inference/src/main.cpp
+
+CMakeFiles/yolov8.dir/src/main.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/yolov8.dir/src/main.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/clh/YOLOv8-inference/src/main.cpp > CMakeFiles/yolov8.dir/src/main.cpp.i
+
+CMakeFiles/yolov8.dir/src/main.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/yolov8.dir/src/main.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/clh/YOLOv8-inference/src/main.cpp -o CMakeFiles/yolov8.dir/src/main.cpp.s
+
+CMakeFiles/yolov8.dir/src/mainwindow.cpp.o: CMakeFiles/yolov8.dir/flags.make
+CMakeFiles/yolov8.dir/src/mainwindow.cpp.o: ../src/mainwindow.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/clh/YOLOv8-inference/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/yolov8.dir/src/mainwindow.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/yolov8.dir/src/mainwindow.cpp.o -c /home/clh/YOLOv8-inference/src/mainwindow.cpp
+
+CMakeFiles/yolov8.dir/src/mainwindow.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/yolov8.dir/src/mainwindow.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/clh/YOLOv8-inference/src/mainwindow.cpp > CMakeFiles/yolov8.dir/src/mainwindow.cpp.i
+
+CMakeFiles/yolov8.dir/src/mainwindow.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/yolov8.dir/src/mainwindow.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/clh/YOLOv8-inference/src/mainwindow.cpp -o CMakeFiles/yolov8.dir/src/mainwindow.cpp.s
+
+CMakeFiles/yolov8.dir/src/yolov8.cpp.o: CMakeFiles/yolov8.dir/flags.make
+CMakeFiles/yolov8.dir/src/yolov8.cpp.o: ../src/yolov8.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/clh/YOLOv8-inference/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/yolov8.dir/src/yolov8.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/yolov8.dir/src/yolov8.cpp.o -c /home/clh/YOLOv8-inference/src/yolov8.cpp
+
+CMakeFiles/yolov8.dir/src/yolov8.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/yolov8.dir/src/yolov8.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/clh/YOLOv8-inference/src/yolov8.cpp > CMakeFiles/yolov8.dir/src/yolov8.cpp.i
+
+CMakeFiles/yolov8.dir/src/yolov8.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/yolov8.dir/src/yolov8.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/clh/YOLOv8-inference/src/yolov8.cpp -o CMakeFiles/yolov8.dir/src/yolov8.cpp.s
 
 # Object files for target yolov8
 yolov8_OBJECTS = \
-"CMakeFiles/yolov8.dir/main.cpp.o"
+"CMakeFiles/yolov8.dir/yolov8_autogen/mocs_compilation.cpp.o" \
+"CMakeFiles/yolov8.dir/src/main.cpp.o" \
+"CMakeFiles/yolov8.dir/src/mainwindow.cpp.o" \
+"CMakeFiles/yolov8.dir/src/yolov8.cpp.o"
 
 # External object files for target yolov8
 yolov8_EXTERNAL_OBJECTS =
 
-yolov8: CMakeFiles/yolov8.dir/main.cpp.o
+yolov8: CMakeFiles/yolov8.dir/yolov8_autogen/mocs_compilation.cpp.o
+yolov8: CMakeFiles/yolov8.dir/src/main.cpp.o
+yolov8: CMakeFiles/yolov8.dir/src/mainwindow.cpp.o
+yolov8: CMakeFiles/yolov8.dir/src/yolov8.cpp.o
 yolov8: CMakeFiles/yolov8.dir/build.make
 yolov8: /usr/local/cuda-11.4/lib64/libcudart.so
 yolov8: /usr/lib/aarch64-linux-gnu/libopencv_gapi.so.4.5.4
@@ -88,6 +133,7 @@ yolov8: /usr/lib/aarch64-linux-gnu/libopencv_photo.so.4.5.4
 yolov8: /usr/lib/aarch64-linux-gnu/libopencv_stitching.so.4.5.4
 yolov8: /usr/lib/aarch64-linux-gnu/libopencv_video.so.4.5.4
 yolov8: /usr/lib/aarch64-linux-gnu/libopencv_videoio.so.4.5.4
+yolov8: /usr/lib/aarch64-linux-gnu/libQt5Widgets.so.5.12.8
 yolov8: /usr/lib/aarch64-linux-gnu/libopencv_imgcodecs.so.4.5.4
 yolov8: /usr/lib/aarch64-linux-gnu/libopencv_dnn.so.4.5.4
 yolov8: /usr/lib/aarch64-linux-gnu/libopencv_calib3d.so.4.5.4
@@ -95,8 +141,10 @@ yolov8: /usr/lib/aarch64-linux-gnu/libopencv_features2d.so.4.5.4
 yolov8: /usr/lib/aarch64-linux-gnu/libopencv_flann.so.4.5.4
 yolov8: /usr/lib/aarch64-linux-gnu/libopencv_imgproc.so.4.5.4
 yolov8: /usr/lib/aarch64-linux-gnu/libopencv_core.so.4.5.4
+yolov8: /usr/lib/aarch64-linux-gnu/libQt5Gui.so.5.12.8
+yolov8: /usr/lib/aarch64-linux-gnu/libQt5Core.so.5.12.8
 yolov8: CMakeFiles/yolov8.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/clh/YOLOv8-inference/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable yolov8"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/clh/YOLOv8-inference/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable yolov8"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/yolov8.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

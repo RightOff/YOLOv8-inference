@@ -1,3 +1,4 @@
 /home/clh/YOLOv8-inference/build/CMakeFiles/rebuild_cache.dir
 /home/clh/YOLOv8-inference/build/CMakeFiles/edit_cache.dir
 /home/clh/YOLOv8-inference/build/CMakeFiles/yolov8.dir
+/home/clh/YOLOv8-inference/build/CMakeFiles/yolov8_autogen.dir

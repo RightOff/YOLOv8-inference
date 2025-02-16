@@ -64,6 +64,7 @@ preinstall:
 
 # The main recursive "clean" target.
 clean: CMakeFiles/yolov8.dir/clean
+clean: CMakeFiles/yolov8_autogen.dir/clean
 
 .PHONY : clean
 
@@ -71,15 +72,15 @@ clean: CMakeFiles/yolov8.dir/clean
 # Target rules for target CMakeFiles/yolov8.dir
 
 # All Build rule for target.
-CMakeFiles/yolov8.dir/all:
+CMakeFiles/yolov8.dir/all: CMakeFiles/yolov8_autogen.dir/all
 	$(MAKE) -f CMakeFiles/yolov8.dir/build.make CMakeFiles/yolov8.dir/depend
 	$(MAKE) -f CMakeFiles/yolov8.dir/build.make CMakeFiles/yolov8.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/clh/YOLOv8-inference/build/CMakeFiles --progress-num=1,2 "Built target yolov8"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/clh/YOLOv8-inference/build/CMakeFiles --progress-num=1,2,3,4,5 "Built target yolov8"
 .PHONY : CMakeFiles/yolov8.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/yolov8.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/clh/YOLOv8-inference/build/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/clh/YOLOv8-inference/build/CMakeFiles 6
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/yolov8.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/clh/YOLOv8-inference/build/CMakeFiles 0
 .PHONY : CMakeFiles/yolov8.dir/rule
@@ -93,6 +94,33 @@ yolov8: CMakeFiles/yolov8.dir/rule
 CMakeFiles/yolov8.dir/clean:
 	$(MAKE) -f CMakeFiles/yolov8.dir/build.make CMakeFiles/yolov8.dir/clean
 .PHONY : CMakeFiles/yolov8.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/yolov8_autogen.dir
+
+# All Build rule for target.
+CMakeFiles/yolov8_autogen.dir/all:
+	$(MAKE) -f CMakeFiles/yolov8_autogen.dir/build.make CMakeFiles/yolov8_autogen.dir/depend
+	$(MAKE) -f CMakeFiles/yolov8_autogen.dir/build.make CMakeFiles/yolov8_autogen.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/clh/YOLOv8-inference/build/CMakeFiles --progress-num=6 "Built target yolov8_autogen"
+.PHONY : CMakeFiles/yolov8_autogen.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/yolov8_autogen.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/clh/YOLOv8-inference/build/CMakeFiles 1
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/yolov8_autogen.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/clh/YOLOv8-inference/build/CMakeFiles 0
+.PHONY : CMakeFiles/yolov8_autogen.dir/rule
+
+# Convenience name for target.
+yolov8_autogen: CMakeFiles/yolov8_autogen.dir/rule
+
+.PHONY : yolov8_autogen
+
+# clean rule for target.
+CMakeFiles/yolov8_autogen.dir/clean:
+	$(MAKE) -f CMakeFiles/yolov8_autogen.dir/build.make CMakeFiles/yolov8_autogen.dir/clean
+.PHONY : CMakeFiles/yolov8_autogen.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

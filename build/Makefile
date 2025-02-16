@@ -123,32 +123,126 @@ yolov8/fast:
 	$(MAKE) -f CMakeFiles/yolov8.dir/build.make CMakeFiles/yolov8.dir/build
 .PHONY : yolov8/fast
 
-main.o: main.cpp.o
+#=============================================================================
+# Target rules for targets named yolov8_autogen
 
-.PHONY : main.o
+# Build rule for target.
+yolov8_autogen: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 yolov8_autogen
+.PHONY : yolov8_autogen
+
+# fast build rule for target.
+yolov8_autogen/fast:
+	$(MAKE) -f CMakeFiles/yolov8_autogen.dir/build.make CMakeFiles/yolov8_autogen.dir/build
+.PHONY : yolov8_autogen/fast
+
+src/main.o: src/main.cpp.o
+
+.PHONY : src/main.o
 
 # target to build an object file
-main.cpp.o:
-	$(MAKE) -f CMakeFiles/yolov8.dir/build.make CMakeFiles/yolov8.dir/main.cpp.o
-.PHONY : main.cpp.o
+src/main.cpp.o:
+	$(MAKE) -f CMakeFiles/yolov8.dir/build.make CMakeFiles/yolov8.dir/src/main.cpp.o
+.PHONY : src/main.cpp.o
 
-main.i: main.cpp.i
+src/main.i: src/main.cpp.i
 
-.PHONY : main.i
+.PHONY : src/main.i
 
 # target to preprocess a source file
-main.cpp.i:
-	$(MAKE) -f CMakeFiles/yolov8.dir/build.make CMakeFiles/yolov8.dir/main.cpp.i
-.PHONY : main.cpp.i
+src/main.cpp.i:
+	$(MAKE) -f CMakeFiles/yolov8.dir/build.make CMakeFiles/yolov8.dir/src/main.cpp.i
+.PHONY : src/main.cpp.i
 
-main.s: main.cpp.s
+src/main.s: src/main.cpp.s
 
-.PHONY : main.s
+.PHONY : src/main.s
 
 # target to generate assembly for a file
-main.cpp.s:
-	$(MAKE) -f CMakeFiles/yolov8.dir/build.make CMakeFiles/yolov8.dir/main.cpp.s
-.PHONY : main.cpp.s
+src/main.cpp.s:
+	$(MAKE) -f CMakeFiles/yolov8.dir/build.make CMakeFiles/yolov8.dir/src/main.cpp.s
+.PHONY : src/main.cpp.s
+
+src/mainwindow.o: src/mainwindow.cpp.o
+
+.PHONY : src/mainwindow.o
+
+# target to build an object file
+src/mainwindow.cpp.o:
+	$(MAKE) -f CMakeFiles/yolov8.dir/build.make CMakeFiles/yolov8.dir/src/mainwindow.cpp.o
+.PHONY : src/mainwindow.cpp.o
+
+src/mainwindow.i: src/mainwindow.cpp.i
+
+.PHONY : src/mainwindow.i
+
+# target to preprocess a source file
+src/mainwindow.cpp.i:
+	$(MAKE) -f CMakeFiles/yolov8.dir/build.make CMakeFiles/yolov8.dir/src/mainwindow.cpp.i
+.PHONY : src/mainwindow.cpp.i
+
+src/mainwindow.s: src/mainwindow.cpp.s
+
+.PHONY : src/mainwindow.s
+
+# target to generate assembly for a file
+src/mainwindow.cpp.s:
+	$(MAKE) -f CMakeFiles/yolov8.dir/build.make CMakeFiles/yolov8.dir/src/mainwindow.cpp.s
+.PHONY : src/mainwindow.cpp.s
+
+src/yolov8.o: src/yolov8.cpp.o
+
+.PHONY : src/yolov8.o
+
+# target to build an object file
+src/yolov8.cpp.o:
+	$(MAKE) -f CMakeFiles/yolov8.dir/build.make CMakeFiles/yolov8.dir/src/yolov8.cpp.o
+.PHONY : src/yolov8.cpp.o
+
+src/yolov8.i: src/yolov8.cpp.i
+
+.PHONY : src/yolov8.i
+
+# target to preprocess a source file
+src/yolov8.cpp.i:
+	$(MAKE) -f CMakeFiles/yolov8.dir/build.make CMakeFiles/yolov8.dir/src/yolov8.cpp.i
+.PHONY : src/yolov8.cpp.i
+
+src/yolov8.s: src/yolov8.cpp.s
+
+.PHONY : src/yolov8.s
+
+# target to generate assembly for a file
+src/yolov8.cpp.s:
+	$(MAKE) -f CMakeFiles/yolov8.dir/build.make CMakeFiles/yolov8.dir/src/yolov8.cpp.s
+.PHONY : src/yolov8.cpp.s
+
+yolov8_autogen/mocs_compilation.o: yolov8_autogen/mocs_compilation.cpp.o
+
+.PHONY : yolov8_autogen/mocs_compilation.o
+
+# target to build an object file
+yolov8_autogen/mocs_compilation.cpp.o:
+	$(MAKE) -f CMakeFiles/yolov8.dir/build.make CMakeFiles/yolov8.dir/yolov8_autogen/mocs_compilation.cpp.o
+.PHONY : yolov8_autogen/mocs_compilation.cpp.o
+
+yolov8_autogen/mocs_compilation.i: yolov8_autogen/mocs_compilation.cpp.i
+
+.PHONY : yolov8_autogen/mocs_compilation.i
+
+# target to preprocess a source file
+yolov8_autogen/mocs_compilation.cpp.i:
+	$(MAKE) -f CMakeFiles/yolov8.dir/build.make CMakeFiles/yolov8.dir/yolov8_autogen/mocs_compilation.cpp.i
+.PHONY : yolov8_autogen/mocs_compilation.cpp.i
+
+yolov8_autogen/mocs_compilation.s: yolov8_autogen/mocs_compilation.cpp.s
+
+.PHONY : yolov8_autogen/mocs_compilation.s
+
+# target to generate assembly for a file
+yolov8_autogen/mocs_compilation.cpp.s:
+	$(MAKE) -f CMakeFiles/yolov8.dir/build.make CMakeFiles/yolov8.dir/yolov8_autogen/mocs_compilation.cpp.s
+.PHONY : yolov8_autogen/mocs_compilation.cpp.s
 
 # Help Target
 help:
@@ -159,9 +253,19 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... yolov8"
-	@echo "... main.o"
-	@echo "... main.i"
-	@echo "... main.s"
+	@echo "... yolov8_autogen"
+	@echo "... src/main.o"
+	@echo "... src/main.i"
+	@echo "... src/main.s"
+	@echo "... src/mainwindow.o"
+	@echo "... src/mainwindow.i"
+	@echo "... src/mainwindow.s"
+	@echo "... src/yolov8.o"
+	@echo "... src/yolov8.i"
+	@echo "... src/yolov8.s"
+	@echo "... yolov8_autogen/mocs_compilation.o"
+	@echo "... yolov8_autogen/mocs_compilation.i"
+	@echo "... yolov8_autogen/mocs_compilation.s"
 .PHONY : help
 
 
