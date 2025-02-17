@@ -321,6 +321,7 @@ CMakeFiles/yolov8.dir/src/mainwindow.cpp.o: /usr/include/aarch64-linux-gnu/qt5/Q
 CMakeFiles/yolov8.dir/src/mainwindow.cpp.o: /usr/include/aarch64-linux-gnu/qt5/QtCore/qvector.h
 CMakeFiles/yolov8.dir/src/mainwindow.cpp.o: /usr/include/aarch64-linux-gnu/qt5/QtCore/qversiontagging.h
 CMakeFiles/yolov8.dir/src/mainwindow.cpp.o: /usr/include/aarch64-linux-gnu/qt5/QtGui/QImage
+CMakeFiles/yolov8.dir/src/mainwindow.cpp.o: /usr/include/aarch64-linux-gnu/qt5/QtGui/QResizeEvent
 CMakeFiles/yolov8.dir/src/mainwindow.cpp.o: /usr/include/aarch64-linux-gnu/qt5/QtGui/qbrush.h
 CMakeFiles/yolov8.dir/src/mainwindow.cpp.o: /usr/include/aarch64-linux-gnu/qt5/QtGui/qcolor.h
 CMakeFiles/yolov8.dir/src/mainwindow.cpp.o: /usr/include/aarch64-linux-gnu/qt5/QtGui/qcursor.h

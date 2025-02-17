@@ -26,6 +26,7 @@ private slots:
     void stopDetection();
     void processFrame();
     void selectModelFile();
+    void resizeEvent(QResizeEvent *event) override;
 private:
     void setupUI();
     void initializeModel();

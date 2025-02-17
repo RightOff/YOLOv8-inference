@@ -144,24 +144,6 @@ common.hpp
 fstream
 -
 
-/home/clh/YOLOv8-inference/build/yolov8_autogen/6YEA5652QU/moc_mainwindow.cpp
-mainwindow.hpp
-/home/clh/YOLOv8-inference/build/yolov8_autogen/6YEA5652QU/mainwindow.hpp
-QtCore/qbytearray.h
--
-QtCore/qmetatype.h
--
-
-/home/clh/YOLOv8-inference/build/yolov8_autogen/mocs_compilation.cpp
-6YEA5652QU/moc_mainwindow.cpp
-/home/clh/YOLOv8-inference/build/yolov8_autogen/6YEA5652QU/moc_mainwindow.cpp
-
-/home/clh/YOLOv8-inference/src/main.cpp
-mainwindow.hpp
-/home/clh/YOLOv8-inference/src/mainwindow.hpp
-QApplication
--
-
 /home/clh/YOLOv8-inference/src/mainwindow.cpp
 mainwindow.hpp
 /home/clh/YOLOv8-inference/src/mainwindow.hpp
@@ -172,6 +154,8 @@ QHBoxLayout
 QMessageBox
 -
 chrono
+-
+QResizeEvent
 -
 
 /usr/include/aarch64-linux-gnu/qt5/QtCore/QTimer
@@ -276,20 +260,6 @@ limits.h
 new
 -
 
-/usr/include/aarch64-linux-gnu/qt5/QtCore/qcoreapplication.h
-QtCore/qglobal.h
--
-QtCore/qstring.h
--
-QtCore/qobject.h
--
-QtCore/qcoreevent.h
--
-QtCore/qeventloop.h
--
-QtCore/qscopedpointer.h
--
-
 /usr/include/aarch64-linux-gnu/qt5/QtCore/qcoreevent.h
 QtCore/qnamespace.h
 -
@@ -346,10 +316,6 @@ QtCore/qfileinfo.h
 QtCore/qstringlist.h
 -
 QtCore/qshareddata.h
--
-
-/usr/include/aarch64-linux-gnu/qt5/QtCore/qeventloop.h
-QtCore/qobject.h
 -
 
 /usr/include/aarch64-linux-gnu/qt5/QtCore/qfile.h
@@ -922,6 +888,10 @@ QtCore/qglobal.h
 qimage.h
 /usr/include/aarch64-linux-gnu/qt5/QtGui/qimage.h
 
+/usr/include/aarch64-linux-gnu/qt5/QtGui/QResizeEvent
+qevent.h
+/usr/include/aarch64-linux-gnu/qt5/QtGui/qevent.h
+
 /usr/include/aarch64-linux-gnu/qt5/QtGui/qbrush.h
 QtGui/qtguiglobal.h
 -
@@ -1024,22 +994,6 @@ QtCore/qsharedpointer.h
 QtCore/qrect.h
 -
 
-/usr/include/aarch64-linux-gnu/qt5/QtGui/qguiapplication.h
-QtGui/qtguiglobal.h
--
-QtCore/qcoreapplication.h
--
-QtGui/qwindowdefs.h
--
-QtGui/qinputmethod.h
--
-QtCore/qlocale.h
--
-QtCore/qpoint.h
--
-QtCore/qsize.h
--
-
 /usr/include/aarch64-linux-gnu/qt5/QtGui/qicon.h
 QtGui/qtguiglobal.h
 -
@@ -1070,12 +1024,6 @@ QtCore/qrect.h
 QtCore/qstring.h
 -
 QtCore/qstringlist.h
--
-
-/usr/include/aarch64-linux-gnu/qt5/QtGui/qinputmethod.h
-QtGui/qtguiglobal.h
--
-QtCore/qobject.h
 -
 
 /usr/include/aarch64-linux-gnu/qt5/QtGui/qkeysequence.h
@@ -1248,10 +1196,6 @@ QtGui/qwindowdefs_win.h
 QtGui/qtguiglobal.h
 -
 
-/usr/include/aarch64-linux-gnu/qt5/QtWidgets/QApplication
-qapplication.h
-/usr/include/aarch64-linux-gnu/qt5/QtWidgets/qapplication.h
-
 /usr/include/aarch64-linux-gnu/qt5/QtWidgets/QFileDialog
 qfiledialog.h
 /usr/include/aarch64-linux-gnu/qt5/QtWidgets/qfiledialog.h
@@ -1290,24 +1234,6 @@ QtGui/qkeysequence.h
 QtWidgets/qwidget.h
 -
 
-/usr/include/aarch64-linux-gnu/qt5/QtWidgets/qapplication.h
-QtWidgets/qtwidgetsglobal.h
--
-QtCore/qcoreapplication.h
--
-QtGui/qwindowdefs.h
--
-QtCore/qpoint.h
--
-QtCore/qsize.h
--
-QtGui/qcursor.h
--
-QtWidgets/qdesktopwidget.h
--
-QtGui/qguiapplication.h
--
-
 /usr/include/aarch64-linux-gnu/qt5/QtWidgets/qboxlayout.h
 QtWidgets/qtwidgetsglobal.h
 -
@@ -1316,12 +1242,6 @@ QtWidgets/qlayout.h
 QtWidgets/qwidget.h
 -
 limits.h
--
-
-/usr/include/aarch64-linux-gnu/qt5/QtWidgets/qdesktopwidget.h
-QtWidgets/qtwidgetsglobal.h
--
-QtWidgets/qwidget.h
 -
 
 /usr/include/aarch64-linux-gnu/qt5/QtWidgets/qdialog.h

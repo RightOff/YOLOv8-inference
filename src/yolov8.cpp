@@ -4,7 +4,7 @@
 // 构造函数实现：加载TensorRT引擎并初始化相关参数
 YOLOv8::YOLOv8(const std::string& engine_file_path)
 {
-    printf("Load TensorRT engine\n");
+    printf("Load TensorRT engine...\n");
     auto start_load = std::chrono::high_resolution_clock::now();
 
     // 读取序列化的TensorRT引擎文件

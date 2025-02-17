@@ -3,6 +3,7 @@
 #include <QHBoxLayout>
 #include <QMessageBox>
 #include <chrono>
+#include <QResizeEvent>
 
 // 构造函数：初始化主窗口
 MainWindow::MainWindow(QWidget *parent)
@@ -283,4 +284,31 @@ void MainWindow::selectModelFile() {
                 QString("模型初始化失败：%1").arg(e.what()));
         }
     }
+}
+
+void MainWindow::resizeEvent(QResizeEvent *event) {
+    QWidget::resizeEvent(event); // 调用基类的处理
+
+    // 获取新的窗口大小
+    int newWidth = event->size().width();
+    int newHeight = event->size().height();
+
+    // 根据原始图像的尺寸计算缩放比例
+    if (!currentFrame.empty()) {
+        double aspectRatio = static_cast<double>(currentFrame.cols) / currentFrame.rows;
+
+        // 计算新的宽高，保持原始比例
+        if (newWidth / aspectRatio <= newHeight) {
+            newHeight = static_cast<int>(newWidth / aspectRatio);
+        } else {
+            newWidth = static_cast<int>(newHeight * aspectRatio);
+        }
+
+        // 缩放图像
+        cv::Mat resizedFrame;
+        cv::resize(currentFrame, resizedFrame, cv::Size(newWidth, newHeight));
+        QImage img = matToQImage(resizedFrame); // 将当前帧转换为 QImage
+        imageLabel->setPixmap(QPixmap::fromImage(img));
+    }
+    update(); // 确保窗口重绘
 }

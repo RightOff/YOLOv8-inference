@@ -322,6 +322,7 @@ CMakeFiles/yolov8.dir/src/mainwindow.cpp.o
  /usr/include/aarch64-linux-gnu/qt5/QtCore/qvector.h
  /usr/include/aarch64-linux-gnu/qt5/QtCore/qversiontagging.h
  /usr/include/aarch64-linux-gnu/qt5/QtGui/QImage
+ /usr/include/aarch64-linux-gnu/qt5/QtGui/QResizeEvent
  /usr/include/aarch64-linux-gnu/qt5/QtGui/qbrush.h
  /usr/include/aarch64-linux-gnu/qt5/QtGui/qcolor.h
  /usr/include/aarch64-linux-gnu/qt5/QtGui/qcursor.h
