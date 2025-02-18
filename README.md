@@ -22,6 +22,8 @@ python3 export-det.py --weights yolov8n.pt --sim
 在 Jetson 环境中
 ```shell
 /usr/src/tensorrt/bin/trtexec --onnx=yolov8n.onnx --saveEngine=yolov8n.engine
+# fp16, int8亦同
+/usr/src/tensorrt/bin/trtexec --onnx=yolov8s.onnx --saveEngine=yolov8s.engine --fp16
 ```
 3. 编译、推理
 ```shell
