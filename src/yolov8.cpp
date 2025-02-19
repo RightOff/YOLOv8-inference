@@ -169,7 +169,9 @@ void YOLOv8::letterbox(const cv::Mat& image, cv::Mat& out, cv::Size& size)
 
     dw /= 2.0f;
     dh /= 2.0f;
-    int top    = int(std::round(dh - 0.1f));    //？？为什么要偏移？
+
+    // 目标框稍微偏大一圈
+    int top    = int(std::round(dh - 0.1f));    
     int bottom = int(std::round(dh + 0.1f));
     int left   = int(std::round(dw - 0.1f));
     int right  = int(std::round(dw + 0.1f));
