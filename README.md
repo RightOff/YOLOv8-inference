@@ -9,7 +9,7 @@
 
 ## 概况
 1. 自定义训练/预训练模型 -> pt
-2. pt -> onnx -> onnx -> engine
+2. pt -> onnx -> engine
 4. cmake、make 编译
 
 ## 推理
