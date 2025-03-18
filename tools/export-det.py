@@ -34,7 +34,7 @@ def parse_args():
                         help='Max number of detection bboxes')
     parser.add_argument('--opset',
                         type=int,
-                        default=11,
+                        default=16,
                         help='ONNX opset version')
     parser.add_argument('--sim',
                         action='store_true',
